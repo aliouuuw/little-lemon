@@ -16,6 +16,11 @@ const LandingSection = () => (
     backgroundColor="#2A4365"
   >
 
+    <Avatar src=' https://i.pravatar.cc/150?img=7' size='2xl'/>
+    <Heading size='sm'>{greeting}</Heading>
+    <Heading size='xl' pt='20px'>{bio1}</Heading>
+    <Heading size='xl'>{bio2}</Heading>
+
   </FullScreenSection>
 );
 

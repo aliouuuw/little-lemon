@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -38,19 +38,42 @@ const Header = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
-        behavior: "smooth",
+        behavior:'smooth' ,
         block: "start",
       });
     }
   };
 
+  const [transval, setTransval] = useState(0);
+
+  useEffect(() => {
+    let prevscroll = 0;
+
+    const handleScroll = () => {
+      const currentscroll = window.scrollY;
+
+      if (currentscroll > prevscroll){
+        setTransval(-200);
+      } else {
+        setTransval(0);
+      }
+      prevscroll = currentscroll;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+
   return (
     <Box
       position="fixed"
+      zIndex='banner'
       top={0}
       left={0}
       right={0}
-      translateY={0}
+      //translateY='-200'
+      transform={`translateY(${transval}px)`}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
@@ -65,20 +88,15 @@ const Header = () => {
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
-            <ul>
-                <li>Insta</li>
-                <li>Twitter</li>
-                <li>Github</li>
-            </ul>
+            {
+            socials.map((item, i) => <a href={item.url} key={i}><FontAwesomeIcon icon={item.icon} size="2x" style={{paddingRight:'10px', height:"20px"}}/></a>)
+            }
           </nav>
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
-            </ul>
+              <a href="/#projects" onClick={handleClick('projects')}>Projects</a>
+              <a href="/#contact-me" onClick={handleClick('contactme')} >Contact Me</a>
             </HStack>
           </nav>
         </HStack>
