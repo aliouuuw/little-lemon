@@ -10,11 +10,10 @@ import {
 
 import { Link } from 'react-router-dom';
 
-import heroimg from '../assets/heroimg.jpg';
 
-export default function HeroSection() {
+export default function HeroSection({bgColor, textColor, showbtn, heroText, heroimg}) {
   return (
-    <Stack as={'section'} bgColor='brand.primary_G' h={{base: '100vh', md: '60vh'}} direction={{ base: 'column', md: 'row' }} px={{base:'10%' , md:'15%', lg: '25%'}}>
+    <Stack as={'section'} bgColor={bgColor} h={{base: '100vh', md: '60vh'}} direction={{ base: 'column', md: 'row' }} px={{base:'10%' , md:'15%', lg: '25%'}}>
       <Flex h={{base: '50%', md: '100%'}} py={10} flex={1} align={'center'} justify={{base: 'center', md: 'start'}}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -33,17 +32,18 @@ export default function HeroSection() {
               }}>
               Little Lemon
             </Text>
-            <br />{' '}
-            <Text color={'brand.secondary_W'} as={'span'} fontSize={'3xl'}>
+            <br />
+            <Text color={textColor} as={'span'} fontSize={'3xl'}>
               Chicago
             </Text>{' '}
           </Heading>
-          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'brand.secondary_W'}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolorum laborum, quia voluptas saepe quisquam.
+          <Text fontSize={{ base: 'md', lg: 'lg' }} color={textColor}>
+            {heroText}
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Link to="reserve">
             <Button
+              display={showbtn}
               rounded={'xl'}
               bg={'brand.primary_Y'}
               color={'brand.secondary_B'}
@@ -60,6 +60,7 @@ export default function HeroSection() {
         <Image
           alt={'Restaurant Image'}
           objectFit={'cover'}
+          rounded={'xl'}
           src={heroimg}
         />
       </Flex>

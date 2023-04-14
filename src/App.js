@@ -19,6 +19,7 @@ const colors = {
   brand:{
     primary_Y : '#F4CE14',
     primary_G : '#495E57',
+    secondary_S: '#EE9972',
     secondary_W : '#EDEFEE',
     secondary_B : '#333333'
   }
