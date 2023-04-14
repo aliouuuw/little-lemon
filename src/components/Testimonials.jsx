@@ -82,7 +82,11 @@ const TestimonialAvatar = ({
 
 export default function Testimonials() {
   return (
-    <Box bgColor={'#d9d9d9'} px={{base:'10%' , md:'15%', lg: '25%'}}>
+    <Box 
+      as={'section'} 
+      bgColor={'#d9d9d9'} 
+      px={{base:'8%' , md:'12%', lg: '18%'}} 
+      w={'full'} >
       <Container maxW={'full'} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
           <Heading>Our Clients Speak</Heading>

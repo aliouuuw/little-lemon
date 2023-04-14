@@ -33,8 +33,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Box h="10vh">
-        <Flex h={16} alignItems={'center'} justifyContent={{base: 'space-between', md:'center'}} px={{base:'10%'}}>
+      <Box as={'nav'} h="10vh" py='1vh' zIndex={'banner'} w={'full'}>
+        <Flex h={16} alignItems={'center'} justifyContent={{base: 'space-between', md:'center'}} px={{base:'8%'}}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -56,7 +56,7 @@ export default function Navbar() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
+          <Box bgColor={'brand.secondary_W'} pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>

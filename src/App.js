@@ -4,7 +4,7 @@ import { ChakraProvider, extendTheme , Box, VStack} from '@chakra-ui/react';
 
 import Home from './routes/Home';
 import Reserve from './routes/Reserve';
-import Navbar from './components/Navbar';
+
 
 /* import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Alert from "./components/Alert";
 
 import { AlertProvider } from "./context/alertContext"; */
+
 
 const colors = {
   brand:{
@@ -26,8 +27,8 @@ const colors = {
 };
 
 const fonts = {
-  body: 'Inter',
-  heading: 'Roboto',
+  body: 'Karla',
+  heading: 'Markazi Text',
 }
 
 const theme = extendTheme({colors, fonts})
@@ -44,7 +45,6 @@ const router = createBrowserRouter(
 function Root(){
   return(
     <Box bgColor="brand.secondary_W">
-      <Navbar/>
       <VStack>
         <Outlet />
       </VStack>

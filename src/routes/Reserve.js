@@ -1,10 +1,13 @@
 import React from 'react'
+import Navbar from '../components/Navbar';
+import MultiSteps from '../components/MultiSteps';
 
 function Reserve() {
   return (
-    <div>
-      Reserve
-    </div>
+    <>
+    <Navbar />
+    <MultiSteps />
+    </>
   )
 }
 

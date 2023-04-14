@@ -16,16 +16,20 @@ import CardItem from './CardItem';
 
 export default function Dishes() {
     return (
-        <Box>
-            <Container maxW={'full'} py={16} as={Stack} spacing={12} px={{base:'10%'}}>
+        <Box 
+          as={'section'} 
+          px={{base:'8%' , md:'12%', lg: '18%'}} 
+          w={'full'}>
+            <Container maxW={'full'} py={16} as={Stack} spacing={12}>
                 <Stack justify='space-between' align={'center'} direction={'row'} >
                     <Heading>This Week's Specials!</Heading>
                     <Button
                         rounded={'xl'}
+                        w={'200px'}
                         bg={'brand.primary_Y'}
                         color={'brand.secondary_B'}
                         _hover={{
-                            bg: 'blue.500',
+                            bg: 'brand.secondary_W',
                         }}>
                         Online Menu
                     </Button>
