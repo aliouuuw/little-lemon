@@ -26,7 +26,7 @@ export default function Form2() {
     return (
         <Stack w={{base: '70vw', md: '45vw', lg: '30vw'}}>
             <Heading fontSize={'2xl'}  w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
-                Sign in to collect points
+                Sign in to collect points (Optional)
             </Heading>
             <Flex>
                 <FormControl mr="5%">

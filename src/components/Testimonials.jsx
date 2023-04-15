@@ -89,7 +89,7 @@ export default function Testimonials() {
       w={'full'} >
       <Container maxW={'full'} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
-          <Heading>Our Clients Speak</Heading>
+          <Heading>Testimonials</Heading>
           <Text>We have been working with clients around the world</Text>
         </Stack>
         <Stack
