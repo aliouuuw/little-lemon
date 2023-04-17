@@ -39,11 +39,6 @@ export default function Form1({values, formik}) {
 
     const [timeSlots, setTimeSlots] = useState([]);
 
-      /* // Check all time slots
-      useEffect(()=>{
-        console.log(timeSlots);
-      }, [timeSlots]);*/
-
     
     return (
         <Stack spacing={4} w={{base: '70vw', md: '45vw', lg: '30vw'}}>

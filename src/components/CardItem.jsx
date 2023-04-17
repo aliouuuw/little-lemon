@@ -4,9 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const CardItem = ({ title, description, imageSrc, price }) => {
-  // Implement the UI for the Card component according to the instructions.
-  // You should be able to implement the component with the elements imported above.
-  // Feel free to import other UI components from Chakra UI if you wish to.
+  
   return (
     <Card rounded={'3xl'} boxShadow='dark-lg' w={{base: '275px', md:'45vw'}} h={{base: 'md', md:'400px', lg:'md'}}>
 
