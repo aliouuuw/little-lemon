@@ -21,7 +21,7 @@ function ConfirmedBooking() {
             });
         }
         else setToastOn(true);
-    }, [toastOn]);
+    }, [toastOn, setToastOn, toast]);
     return (
         <>
             <Navbar />
