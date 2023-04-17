@@ -4,16 +4,9 @@ import { ChakraProvider, extendTheme , Box, VStack} from '@chakra-ui/react';
 
 import Home from './routes/Home';
 import Reserve from './routes/Reserve';
+import ConfirmedBooking from './routes/ConfirmedBooking';
+import { AlertProvider } from './context/alertContext';
 
-
-/* import Header from "./components/Header";
-import LandingSection from "./components/LandingSection";
-import ProjectsSection from "./components/ProjectsSection";
-import ContactMeSection from "./components/ContactMeSection";
-import Footer from "./components/Footer";
-import Alert from "./components/Alert";
-
-import { AlertProvider } from "./context/alertContext"; */
 
 
 const colors = {
@@ -38,6 +31,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root/>}>
       <Route index element={<Home/>}/>
       <Route path="reserve" element={<Reserve/>}/>
+      <Route path="confirmation" element={<ConfirmedBooking/>}/>
     </Route>
   )
 );
@@ -55,7 +49,9 @@ function Root(){
 function App() {
   return (
     <ChakraProvider theme = {theme}>
-      <RouterProvider router={router} />
+      <AlertProvider>
+        <RouterProvider router={router} />
+      </AlertProvider>
     </ChakraProvider>
   );
 }
