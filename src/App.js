@@ -8,7 +8,6 @@ import ConfirmedBooking from './routes/ConfirmedBooking';
 import { AlertProvider } from './context/alertContext';
 
 
-
 const colors = {
   brand:{
     primary_Y : '#F4CE14',
