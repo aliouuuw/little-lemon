@@ -6,8 +6,6 @@ import InfoCard from '../components/InfoCard';
 
 function ConfirmedBooking() {
 
-    //const [toastMode, setToastMode] = useState(false);
-
     const { toastOn, setToastOn } = useAlertContext()
     const toast = useToast();
     
