@@ -31,7 +31,7 @@ export default function MultiSteps(props) {
   const [occasion, setOccasion] = useState();
   const [seating, setSeating] = useState();
 
-  const { setBookInfo } = useAlertContext();
+  const { setBookInfo, setToastOn } = useAlertContext();
 
   const initializeTimes = {
     date: "yyyy-MM-dd",
@@ -77,7 +77,8 @@ export default function MultiSteps(props) {
       };
       console.log("Form values:", formValues);
       setBookInfo(formValues);
-      props.navigate("/confirmation");
+      setToastOn(false);
+      props.navigate("/little-lemon/confirmation");
     },
     validationSchema: Yup.object({
       date: Yup.string().required("Required"),
@@ -94,7 +95,8 @@ export default function MultiSteps(props) {
         rounded="lg"
         maxWidth={800}
         p={15}
-        m="auto"
+        mx="auto"
+        mt={8}
         as="form"
         onSubmit={formik.handleSubmit}
         bgColor={'brand.secondary_W'}
@@ -156,9 +158,8 @@ export default function MultiSteps(props) {
           </Flex>
         </ButtonGroup>
       </Box>
-      <Link to="/">
+      <Link to="/little-lemon">
         <Button
-          mt={'-90px'}
           mb={'5'}
           rounded={'xl'}
           bg={'brand.primary_Y'}

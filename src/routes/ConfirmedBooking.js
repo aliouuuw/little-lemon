@@ -10,18 +10,21 @@ function ConfirmedBooking() {
 
     const { toastOn, setToastOn } = useAlertContext()
     const toast = useToast();
+    
 
     useEffect(() => {
         if (toastOn) {
             toast({
                 title: 'Booking successful!',
+                position: 'top',
                 status: 'success',
                 duration: 5000,
                 isClosable: true,
             });
         }
         else setToastOn(true);
-    }, [toastOn, setToastOn, toast]);
+        // eslint-disable-next-line
+    }, [toastOn]);
     return (
         <>
             <Navbar />

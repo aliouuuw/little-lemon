@@ -12,11 +12,13 @@ function InfoCard() {
                 bgColor={'brand.secondary_W'}
                 borderWidth="1px"
                 rounded="lg"
-                m={'auto'}
+                mx="auto"
+                mt={8}
+                w={{base: '70vw', md: '45vw', lg: '30vw'}}
                 maxWidth={800}
                 p={15}>
                 <Heading fontSize={'2xl'} align={'center'} my={'2'} fontWeight={'normal'}>Your reservation was received. Thank you!</Heading>
-                <Card bgColor={'#d9d9d9'} w={{ base: '70vw', md: '45vw', lg: '30vw' }} >
+                <Card bgColor={'#d9d9d9'} w={'auto'} >
                     <CardHeader>
                         <Text size='lg' textAlign={'center'} fontWeight={'bold'}>Reservation Information</Text>
                     </CardHeader>
@@ -47,9 +49,8 @@ function InfoCard() {
                     </CardBody>
                 </Card>
             </Box>
-            <Link to="/">
+            <Link to="/little-lemon">
                 <Button
-                    mt={'-70px'}
                     mb={'5'}
                     rounded={'xl'}
                     bg={'brand.primary_Y'}

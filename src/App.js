@@ -28,10 +28,10 @@ const theme = extendTheme({colors, fonts})
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root/>}>
+    <Route path="/little-lemon" element={<Root/>}>
       <Route index element={<Home/>}/>
-      <Route path="reserve" element={<Reserve/>}/>
-      <Route path="confirmation" element={<ConfirmedBooking/>}/>
+      <Route path="/little-lemon/reserve" element={<Reserve/>}/>
+      <Route path="/little-lemon/confirmation" element={<ConfirmedBooking/>}/>
     </Route>
   )
 );
