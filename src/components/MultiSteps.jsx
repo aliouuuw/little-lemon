@@ -13,13 +13,14 @@ import {
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 
-import Form1 from './Form1';
-import Form2 from './Form2';
-import Form3 from './Form3';
+import BookingForm from "./BookingForm";
+import CustomerDetails from "./CustomerDetails";
+import PaymentForm from './PaymentForm';
 
 import { useAlertContext } from "../context/alertContext";
 
 import { Link } from 'react-router-dom';
+
 
 export default function MultiSteps(props) {
   const [step, setStep] = useState(1);
@@ -107,7 +108,7 @@ export default function MultiSteps(props) {
           mb="5%"
           mx="5%"
           isAnimated></Progress>
-        {step === 1 ? <Form1 values={formStates} formik={formik} /> : step === 2 ? <Form2 /> : <Form3 />}
+        {step === 1 ? <BookingForm values={formStates} formik={formik} /> : step === 2 ? <CustomerDetails /> : <PaymentForm />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
             <Flex>

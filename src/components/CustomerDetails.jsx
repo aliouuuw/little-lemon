@@ -13,7 +13,7 @@ import {
     Stack
 } from '@chakra-ui/react';
 
-export default function Form2() {
+export default function CustomerDetails() {
     const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
     return (

@@ -22,7 +22,7 @@ import {
 import { fetchAPI } from "../api/api";
 
   
-export default function Form1({values, formik}) {
+export default function BookingForm({values, formik}) {
     
     const {
         state,

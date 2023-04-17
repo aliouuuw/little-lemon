@@ -10,7 +10,7 @@ import {
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Form3() {
+export default function PaymentForm() {
   return (
     <Box w={{ base: '70vw', md: '45vw', lg: '30vw' }} mx="auto">
       <Heading fontSize={'2xl'} w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
