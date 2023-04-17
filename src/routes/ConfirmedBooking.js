@@ -9,7 +9,6 @@ function ConfirmedBooking() {
     const { toastOn, setToastOn } = useAlertContext()
     const toast = useToast();
     
-
     useEffect(() => {
         if (toastOn) {
             toast({
